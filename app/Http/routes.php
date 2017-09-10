@@ -11,8 +11,11 @@
 |
 */
 Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
-Route::get('/contact', 'PagesController@getContact');
-Route::get('/about', 'PagesController@getAbout');
+Route::get('home', ['as' => 'blog.home', 'uses' => 'BlogController@getHome']);
+
+Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@getIndex']);
+Route::get('contact', 'PagesController@getContact');
+Route::get('about', 'PagesController@getAbout');
 Route::get('/', 'PagesController@getIndex');
 Route::resource('posts', 'PostController');
 

@@ -16,15 +16,26 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getHome()
     {
-        //
+        $posts = Post::paginate(10);
+
+        return view('blog.home')->withPosts($posts);
+        //return redirect()->route('blog.index')->withPosts($posts);
+    }
+
+    public function getIndex()
+    {
+        $posts = Post::paginate(10);
+
+        // return view('blog.index')->withPosts($posts);
+        return redirect()->route('blog.home')->withPosts($posts);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $slug
      * @return \Illuminate\Http\Response
      */
     public function getSingle($slug)
