@@ -17,7 +17,10 @@
                 <hr />
                 {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '')) !!}
                   {!! Form::label('title', 'Title:') !!}
-                  {!! Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlenght' => '255')) !!}
+                  {!! Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) !!}
+
+                  {!! Form::label('slug', 'Slug:', array('style' => 'margin-top: 20px;')) !!}
+                  {!! Form::text('slug', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) !!}
                   
                   {!! Form::label('body', 'Post Body:', array('style' => 'margin-top: 20px;')) !!}
                   {!! Form::textarea('body', null, array('class' => 'form-control', 'required' => '')) !!}
