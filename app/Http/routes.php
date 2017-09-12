@@ -11,13 +11,22 @@
 |
 */
 Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
-Route::get('home', ['as' => 'blog.home', 'uses' => 'BlogController@getHome']);
+Route::get('home', ['as' => 'blog.home', 'uses' => 'BlogController@getBlogHome']);
+// Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@getIndex']);
+// Authentication Routes
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@getIndex']);
+//Registration Routes
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
 Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getAbout');
 Route::get('/', 'PagesController@getIndex');
 Route::resource('posts', 'PostController');
+//Route::resource('blogs', 'BlogController');
 
 /*Application Routes */
 

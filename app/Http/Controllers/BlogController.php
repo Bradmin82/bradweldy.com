@@ -16,10 +16,11 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getHome()
+    public function getBlogHome()
     {
-        $posts = Post::paginate(10);
-
+        $posts = Post::orderBy('created_at', 'desc')->paginate(5); 
+        //$posts = Post::orderBy('created_at', 'desc')->limit(6)->get();
+        
         return view('blog.home')->withPosts($posts);
         //return redirect()->route('blog.index')->withPosts($posts);
     }
@@ -29,6 +30,7 @@ class BlogController extends Controller
         $posts = Post::paginate(10);
 
         // return view('blog.index')->withPosts($posts);
+        // return redirect()->route('blog.index')->withPosts($posts);
         return redirect()->route('blog.home')->withPosts($posts);
     }
 

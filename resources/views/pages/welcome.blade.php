@@ -32,6 +32,11 @@
                 <h2>Sidebar</h2>
                 <p>Blah blah blah.</p>
             </div>
+            {{-- <div class="col-md-12">
+              <div class="text-center">
+                {!! $posts->render() !!}
+              </div>
+            </div> --}}
         </div>
          {{-- <div class="text-center">
           {!! $posts->render(); !!}

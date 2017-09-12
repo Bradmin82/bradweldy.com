@@ -22,12 +22,6 @@
         <a href="{{ route('blog.single', $post->id) }}">Read More</a>
       </div>
   </div>
-
-  <div class="col-md-12">
-    <div class="text-center">
-      {!! $posts->render() !!}
-    </div>
-  </div>
   @endforeach
 
 
