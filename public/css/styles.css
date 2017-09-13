@@ -1,6 +1,127 @@
+.greeting {
+	display: inline-block;
+	text-align: right;
+}
+.greeting h1 {
+	font-size: 88px;
+	font-weight: 200;
+	color: #e7e7e7;
+	color: #0f228c;
+	margin: 50px 0px;
+}
+.greeting h1:nth-child(2) {
+	/*text-align: center;*/
+	/*margin-left: 7%;*/
+}
+.greeting.grafiti {
+	display: inline-block;
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.96) 3%,rgba(255,255,255,0.11) 75%,rgba(255,255,255,0) 84%,rgba(255,255,255,0) 95%,rgba(255,255,255,0) 97%);
+	padding: 10px 5%;
+	text-align: right;
+}
+body.about {
+	background: url(/img/grafiti.jpg);
+    background-size: cover;
+}
+
+
+.jumbotron.home-title-jumbo {
+	text-align: center;
+}
+.home-title-jumbo h1 {
+	display: inline-block;
+	font-weight: 200;
+	margin: 0px;
+    vertical-align: middle;
+}
+.jumbotron.home-title-jumbo p {
+	display: inline-block;
+	margin: 0px 50px;
+    vertical-align: middle;
+}
+/*.BROKEN.homepage .jumbotron.home-title-jumbo {
+	background: radial-gradient(ellipse at center, rgba(51,51,51,1) 0%,rgba(51,51,51,1) 24%,rgba(51,51,51,0) 98%,rgba(51,51,51,0) 100%);
+}*/
+.homepage .jumbotron.home-title-jumbo {
+	margin-top: 100px;
+}
+.about .jumbotron.home-title-jumbo.grafiti {
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 24%,rgba(255,255,255,0) 98%,rgba(255,255,255,0) 100%);
+}
+
+/*Transparent gradient*/
+.gradient {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+	background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.top-right-corner-img {
+	position:absolute;
+	top:50px;
+	right:0px;
+}
+.top-right-corner-img img {
+	max-width:50%;
+	z-index:0;
+	float:right;
+}
+.top-right-corner-img .gradient {
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:2;
+	width:50%;
+	height:100%;
+	float:right;
+}
+/*end homepage*/
+
+/*about*/
+.macbook-pro {
+	text-align: center;
+	padding: 75px 0px;
+}
+.client-site {
+	position: absolute;
+	top: 128px;
+	width: 100%;
+}
+.client-site img {
+	width: 320px;
+    height: 205px;
+    margin: 0px 34px 0px 0px;
+}
+/*contact*/
+.my-contact-info a {
+	color: #0f228c;
+	font-weight: 200;
+}
+
 .btn-h1-spacing {
   margin-top: 20px;
 }
 .form-spacing-top {
   margin-top: 20px;
+}
+
+@media(max-width: 1024px) {
+	.greeting h1 {
+		font-size: 66px;
+		z-index:3;
+	}
+}
+@media(max-width: 991px) {
+	.macbook-pro img {
+		max-width: 350px;
+	}
+	.client-site {
+		top: 116px;
+	}
+	.client-site img {
+	    width: 243px;
+	    height: 153px;
+	    margin: 0px 33px 0px 0px;
+	}
 }

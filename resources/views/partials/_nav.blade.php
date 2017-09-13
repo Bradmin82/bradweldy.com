@@ -1,3 +1,8 @@
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTFTS5F"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -14,7 +19,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="{{ Request::is('/') ? "active" : "" }}"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+            {{-- <li class="{{ Request::is('/') ? "active" : "" }}"><a href="/">Home <span class="sr-only">(current)</span></a></li> --}}
             <li class="{{ Request::is('home') ? "active" : "" }}"><a href="/home">Blog</a></li>
             <li class="{{ Request::is('about') ? "active" : "" }}"><a href="/about">About</a></li>
             <li class="{{ Request::is('contact') ? "active" : "" }}"><a href="/contact">Contact</a></li>

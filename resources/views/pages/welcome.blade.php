@@ -6,41 +6,24 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="jumbotron">
-                  <h1>Welcome to my Blog!</h1>
-                  <p>Thank you so much for visiting. Test site on Laravel 5.2</p>
-                  <p><a class="btn btn-primary btn-lg" href="#" role="button">Popular Post</a></p>
+                {{-- <div class="greeting grafiti"> --}}
+                <div class="greeting">
+                    <h1>Eloquent.</h1>
+                    <h1>Clean.</h1>
+                    <h1>Effective.</h1>
+                </div>
+
+                <div class="jumbotron home-title-jumbo">
+                  <h1>Brad Weldy Marketing</h1>
+                  <p><a class="btn btn-primary btn-lg" href="/auth/register" role="button">Get Started</a></p>
                 </div>
             </div>
+
+            <div class="top-right-corner-img">
+                <img src="/img/pencil.jpg" />
+                <div class="gradient"></div>
+            </div>
+
         </div> <!-- end of header .row -->
-        <div class="row">
-            <div class="col-md-8">
-                
-                @foreach($posts as $post)
-
-                    <div class="post">
-                        <h3>{!! $post->title !!}</h3>
-                        <p>{!! substr($post->body, 0, 300) !!}{!! strlen($post->body) > 300 ? "..." : "" !!}</p>
-                        <a href="{{ url('blog/' . $post->slug) }}" class="btn btn-primary">Read More</a>
-                    </div>
-                    <hr />
-                
-                @endforeach
-
-            </div>
-            <div class="col-md-3 col-md-offset-1">
-                <h2>Sidebar</h2>
-                <p>Blah blah blah.</p>
-            </div>
-            {{-- <div class="col-md-12">
-              <div class="text-center">
-                {!! $posts->render() !!}
-              </div>
-            </div> --}}
-        </div>
-         {{-- <div class="text-center">
-          {!! $posts->render(); !!}
-         </div> --}}
-
 
 @endsection

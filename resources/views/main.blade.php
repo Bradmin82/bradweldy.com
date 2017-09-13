@@ -5,7 +5,8 @@
     @include('partials._head')
   
   </head>
-  <body>
+  {{-- <body class="{{ Request::is('/') ? "homepage" : "" }}"> --}}
+  <body class="@if(Request::is('/'))homepage @elseif(Request::is('about'))about @elseif(Request::is('contact'))contact @endif">
 
   @include('partials._nav')
 
@@ -13,7 +14,7 @@
             
             @include('partials._messages')
 
-            {{ Auth::check() ? "Logged In" : "Logged Out" }}
+            {{ Auth::check() ? "Logged In" : "" }}
 
             @yield('content')
                 
