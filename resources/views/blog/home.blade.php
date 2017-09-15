@@ -14,7 +14,7 @@
             </div>
         </div> <!-- end of header .row -->
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 blog-posts-home">
                 
                 @foreach($posts as $post)
 
