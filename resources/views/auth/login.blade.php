@@ -21,6 +21,8 @@
                 <br />
                 {!! Form::submit('Login', ['class' => 'btn btn-primary btn-block']) !!}
 
+                <p class="form-spacing-top"><a href="{{ url('password/email') }}">Forgot Password</a></p>
+
               {!! Form::close() !!}  
 
             </div>
