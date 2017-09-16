@@ -29,9 +29,9 @@ class BlogController extends Controller
     {
         $posts = Post::paginate(10);
 
-        // return view('blog.index')->withPosts($posts);
+        return view('blog.index')->withPosts($posts);
         // return redirect()->route('blog.index')->withPosts($posts);
-        return redirect()->route('blog.home')->withPosts($posts);
+        // return redirect()->route('blog.home')->withPosts($posts);
     }
 
     /**
