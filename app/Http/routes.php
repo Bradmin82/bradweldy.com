@@ -28,8 +28,11 @@ Route::get('password/email', ['as' => 'email', 'uses' => 'Auth\PasswordControlle
 Route::post('password/email', 'Auth\PasswordController@postEmail');
 
 // Password reset routes...
-Route::get('password/reset/{token}', ['as' => 'reset', 'uses' => 'Auth\PasswordController@getReset']);
+Route::get('password/reset/{token?}', ['as' => 'reset', 'uses' => 'Auth\PasswordController@getReset']);
 Route::post('password/reset', 'Auth\PasswordController@postReset');
+
+// Categories
+Route::resource('categories', 'CategoryController', ['except' => ['create']]);
 
 
 
