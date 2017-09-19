@@ -112,6 +112,12 @@ body.blog {
 .blog-posts-home hr:last-child {
 	visibility: hidden;
 }
+
+/*Tags*/
+.tag-edit-spacing {
+	margin-top: 20px;
+}
+
 @media(max-width: 1024px) {
 	.greeting h1 {
 		font-size: 66px;

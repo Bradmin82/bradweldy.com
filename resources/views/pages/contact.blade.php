@@ -13,7 +13,8 @@
                     <h2><a href="tel:9494563310">(949)456-3310</a></h2>
                 </div>
                 <div class="col-md-6">
-                    <form>
+                    <form action="{{ url('contact') }}" method="POST">
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label name="email">Email:</label>
                             <input id="email" name="email" class="form-control">
