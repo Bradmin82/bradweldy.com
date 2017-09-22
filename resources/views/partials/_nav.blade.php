@@ -46,7 +46,7 @@
             
             @else
 
-              <a href="{{ route('login') }}" class="btn btn-default">Login</a>
+              <a href="{{ route('login') }}" class="btn btn-default login-btn">Login</a>
             
             @endif
 
