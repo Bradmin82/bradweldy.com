@@ -7,7 +7,7 @@
   <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <h1>{{ $post->title }}</h1>
-        <p class="lead">{{ $post->body }} </p>
+        <p class="lead">{!! $post->body !!} </p>
         <hr />
         <p>Posted In: {{ $post->category->name }}</p>
 
@@ -24,7 +24,7 @@
   		@foreach($post->comments as $comment)
     		<div class="comment">	
           <div class="author-info">  
-              <img src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?s=50&d=mm" }}" class="author-image" />
+              <img src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?s=50&d=monsterid" }}" class="author-image" />
               <div class="author-name"> 
                  <h4>{{ $comment->name }}</h4>
                  <p class="author-time">{{ date('F nS, Y - g:i A' ,strtotime($comment->created_at)) }}</p>

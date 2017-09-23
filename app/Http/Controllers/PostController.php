@@ -57,6 +57,7 @@ class PostController extends Controller
                 'title' => 'required|max:255',
                 'slug' => 'required|alpha_dash|max:255|unique:posts,slug',
                 'category_id' => 'required|integer',
+                'tags' => 'required',
                 'body' => 'required'
             ));
 
@@ -131,6 +132,7 @@ class PostController extends Controller
             $this->validate($request, array(
                 'title' => 'required|max:255',
                 'category_id' => 'required|integer',
+                'tags' => 'required',
                 'body' => 'required'
             ));
         } else {

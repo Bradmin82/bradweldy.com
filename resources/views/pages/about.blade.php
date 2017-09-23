@@ -2,12 +2,16 @@
 
 @section('title', '| About')
 
+@section('stylesheets', '<style type="text/css">/*.about-p h4 { color:red; }*/</style>')
+
+@section('scripts', '<script type="text/javascript">console.log("About page");</script>')
+
 @section('content')
 
 	<div class="row">
 	    <div class="col-md-12">
 	    	<h4>
-	    		<a href="BradWeldyResumeR2017.pdf" target="_blank" style="color: #0f228c;background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.96) 3%,rgba(255,255,255,0.11) 75%,rgba(255,255,255,0) 84%,rgba(255,255,255,0) 95%,rgba(255,255,255,0) 97%); position: absolute; z-index: 5;">Resume</a>
+	    		<a href="https://docs.google.com/document/d/1D8PKqP8oO3ifnc1J-4n78H2tf4PwK6iId3-oZaEOyX4/edit?usp=sharing" target="_blank" style="color: #0f228c;background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.96) 3%,rgba(255,255,255,0.11) 75%,rgba(255,255,255,0) 84%,rgba(255,255,255,0) 95%,rgba(255,255,255,0) 97%); position: absolute; z-index: 5;">Resume</a>
 	    	</h4>
 	    	<div class="col-md-5">
 		        <div class="greeting grafiti">
