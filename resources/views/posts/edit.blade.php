@@ -6,7 +6,16 @@
 
   {!! Html::style('css/select2.min.css') !!}
 
-  <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <style type="text/css">
+    .edit-post-img img {
+      max-width: 100%;
+    }
+    .mce-branding-powered-by {
+      display: none;
+    }  
+  </style>
+
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=sa4303hwoxvky0hu2ttt20n8l6b5tchyy7dqb4r25pbxuczg"></script>
   <script>
       tinymce.init({
           selector: 'textarea',
@@ -65,6 +74,13 @@
               </div>
             </div>
 
+        </div>
+        <div class="row">
+          <div class="col-sm-12 text-center btn-h1-spacing edit-post-img">
+            <?php if($post->image) { ?>
+              <img src="{{ asset('images/' . $post->image) }}" />
+            <?php } ?>
+          </div>
         </div>
       </div>
     {!! Form::close() !!}
