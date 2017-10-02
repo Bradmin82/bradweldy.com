@@ -12,7 +12,7 @@
             color: #0f228c;*/
             margin: 50px 0px;
         }
-        @media(max-width: 1024px) {
+        @media(max-width: 991px) {
             .hp-flash h1:first-child {
                 display: none;
             }
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-6 col-md-offset-1 hp-flash">
                     <h1><br /></h1>
-                    <h1 class="the-greet">Marketing</h1>
+                    <h1 class="the-greet"></h1>
                 </div>
 
             </div>
