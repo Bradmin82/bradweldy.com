@@ -26,6 +26,23 @@ class PagesController extends Controller {
 		return view('pages/about')->with("fullname", $full);
 	}
 
+	public function getAboutWebDev() {
+		$first = 'Brad';
+		$last = 'Weldy';
+
+		$full = $first . " ". $last;
+
+		return view('portfolio/web-dev')->with("fullname", $full);
+	}
+
+	public function getAboutMarketing() {
+		return view('portfolio/marketing');
+	}
+
+	public function getAboutSEO() {
+		return view('portfolio/seo');
+	}
+
 	public function getContact() {
 		return view('pages/contact');
 	}
@@ -43,7 +60,8 @@ class PagesController extends Controller {
 		);
 
 		Mail::send('emails.contact', $data, function($message) use ($data) {
-			$message->from($data['email']);
+			// $message->from($data['email']);
+			$message->from('info@bradweldy.com');
 			$message->to('bweldy82@gmail.com');
 			$message->subject($data['subject']);
 		});
@@ -51,7 +69,8 @@ class PagesController extends Controller {
 		Session::flash('success', 'Your Email was Sent!');
 
 		// return redirect()->url('/');
-		return view('pages/welcome');
+		// return view('pages/welcome');
+		return view('pages/contact');
 	}
 
 }

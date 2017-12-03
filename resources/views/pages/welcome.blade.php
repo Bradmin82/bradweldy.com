@@ -12,7 +12,7 @@
             color: #0f228c;*/
             margin: 50px 0px;
         }
-        @media(max-width: 1024px) {
+        @media(max-width: 991px) {
             .hp-flash h1:first-child {
                 display: none;
             }
@@ -36,21 +36,22 @@
         <div class="row">
             <div class="col-md-12">
                 {{-- <div class="greeting grafiti"> --}}
-                <div class="col-md-5 greeting">
+                <div class="col-md-4 greeting">
                     <h1>Eloquent.</h1>
                     <h1>Clean.</h1>
                     <h1>Effective.</h1>
                 </div>
-                <div class="col-md-6 col-md-offset-1 hp-flash">
+                <div class="col-md-6 col-md-offset-2 hp-flash">
                     <h1><br /></h1>
-                    <h1 class="the-greet">Marketing</h1>
+                    <h1 class="the-greet"></h1>
                 </div>
 
             </div>
             <div class="col-md-12">
                 <div class="jumbotron home-title-jumbo">
                   <h1>Brad Weldy Marketing</h1>
-                  <p><a class="btn btn-primary btn-lg" href="/auth/register" role="button">Get Started</a></p>
+                  {{-- <p><a class="btn btn-primary btn-lg" href="/auth/register" role="button">Get Started</a></p> --}}
+                  <p><a class="btn btn-primary btn-lg" href="/contact" role="button">Get Started</a></p>
                 </div>
             </div>
 
@@ -70,7 +71,8 @@
             var hpFlash = $('.hp-flash');
 
             var timeout = 3000;
-            var greetingFlash = ['Marketing', 'Web-Dev', 'SEO'];
+            var greetingFlash = ['<a href="/about/marketing">Marketing</a>', '<a href="/about/web-dev">Web-Dev</a>', '<a href="/about/seo">SEO</a>'];
+            //, 'I  &#10084; Michelle'
             var index = 0;
             var action = function() {
                 if(hpFlash.is(':hover'))

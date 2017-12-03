@@ -123,7 +123,16 @@ class PostController extends Controller
         foreach ($tags as $tag) {
             $tags2[$tag->id] = $tag->name;
         }
+
+        // $images = Image::all();
+        // $imgs = array();
+        // foreach ($images as $image) {
+        //     $imgs[$image->id] = $image->image;
+        // }
+        
         // return the view and pass in the var we previously created
+        
+        // return view('posts.edit')->withPost($post)->withCategories($cats)->withTags($tags2)->withImages($imgs);
         return view('posts.edit')->withPost($post)->withCategories($cats)->withTags($tags2);
     }
 
@@ -162,7 +171,7 @@ class PostController extends Controller
         $post->category_id = $request->input('category_id');
         $post->body = $request->input('body');
 
-        //save our image
+        // Save our image
         // if ($request->file('featured_image')) {
         //     $image = $request->file('featured_image');
         //     $filename = time() . '.' . $image->getClientOriginalExtension();

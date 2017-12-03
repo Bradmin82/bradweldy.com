@@ -50,6 +50,10 @@ Route::get('contact', 'PagesController@getContact');
 Route::post('contact', 'PagesController@postContact');
 
 Route::get('about', 'PagesController@getAbout');
+Route::get('/about/web-dev', 'PagesController@getAboutWebDev');
+Route::get('/about/marketing', 'PagesController@getAboutMarketing');
+Route::get('/about/seo', 'PagesController@getAboutSEO');
+
 Route::get('/', 'PagesController@getIndex');
 Route::resource('posts', 'PostController');
 //Route::resource('blog', 'BlogController');

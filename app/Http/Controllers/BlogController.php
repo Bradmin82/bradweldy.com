@@ -21,7 +21,7 @@ class BlogController extends Controller
         $posts = Post::orderBy('created_at', 'desc')->paginate(5); 
         //$posts = Post::orderBy('created_at', 'desc')->limit(6)->get();
         
-        return view('blog.home')->withPosts($posts);
+        return view('blog.index')->withPosts($posts);
         //return redirect()->route('blog.index')->withPosts($posts);
     }
 

@@ -2,12 +2,38 @@
 
 @section('title', '| Contact')
 
+@section('stylesheets')
+
+    <style>
+        .contact-brad-weldy {
+            margin-bottom: 50px;
+        }
+        .contact-brad-weldy h2 {
+            font-weight: 200;
+            color: #0f228c;
+            color: #333;
+            font-size: 33px;
+            text-align: center;
+        }
+        .contact-brad-weldy h2:last-child {
+            color: #333;
+        }
+    </style>
+
+@endsection
+
 @section('content')
 
         <div class="row">
             <div class="col-md-12">
                 <h1>Contact</h1>
                 <hr />
+
+                <div class="col-md-12 contact-brad-weldy">
+                <h2>Brad Weldy Marketing</h2>
+                <h2>Helping Your Business Grow</h2>
+                </div>
+
                 <div class="col-md-6 my-contact-info">
                     <h2><a href="mailto:BWeldy82@gmail.com">BWeldy82@gmail.com</a></h2>
                     <h2><a href="tel:9494563310">(949)456-3310</a></h2>
