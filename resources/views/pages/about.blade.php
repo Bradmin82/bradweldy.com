@@ -61,7 +61,9 @@
 		    -o-filter: blur(5px);
 		    -ms-filter: blur(5px);
 		    filter: blur(5px);
-		    width: 100%;
+		    /*width: 100%;*/
+		    width: 70%;
+		    margin: 0 auto;
 		    height: 50px;
 		    background: white;
 		    z-index: 1;
@@ -213,10 +215,6 @@
                 	$('.client-info-active').removeClass('client-info-active');
                 }
                 $('.client-info').eq(index).addClass('client-info-active');
-                
-                // $('.client-info').next().fadeIn('fast', function() {
-                //     $('.client-info').addClass('client-info-active');
-                // });
 
                 if(++index >= portfolioFlash.length)
                     index = 0;        
@@ -226,7 +224,13 @@
 
             function parallax() {
 				var prlx_lyr_1 = $('.about-img');
-				var aboutImgOffset = -(window.pageYOffset * 1.5 )+'px';
+				var theOffset;
+				if ($(window).width() > 767) {
+					theOffset = 1.5;
+				} else {
+					theOffset = 0.5;
+				}
+				var aboutImgOffset = -(window.pageYOffset * theOffset )+'px';
 				prlx_lyr_1.css('top', aboutImgOffset);
 			}
 			window.addEventListener("scroll", parallax, false);
