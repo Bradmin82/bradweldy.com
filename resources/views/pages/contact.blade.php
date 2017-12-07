@@ -53,7 +53,7 @@
                             <label name="message">Message:</label>
                             <textarea id="message" name="message" class="form-control" placeholder="How can we help?"></textarea>
                         </div>
-                        <input type="submit" value="Send Message" class="btn btn-success">
+                        <input type="submit" value="Send Message" class="btn btn-primary">
                     </form>
                 </div>
             </div>
