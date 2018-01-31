@@ -1,0 +1,194 @@
+<HTML>
+<header>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css">
+/* https://codepen.io/anon/pen/QyyENa */
+  .html,
+  .splitz-wrapper,
+  .splitz {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .splitz-wrapper {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+  }
+
+  .splitz {
+    overflow: hidden;
+    position: relative;
+
+    -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+  }
+
+  .second {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #ddd;
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    overflow: hidden;
+    transition: top 600ms linear, left 600ms linear;
+  }
+
+  .first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #ccc;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+    overflow: hidden;
+    transition: top 600ms linear, left 600ms linear;
+  }
+
+  .first-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+
+  .first-img img {
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+  }
+
+  .second-img img {
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+  }
+
+  .second-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: 100% 100%;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.0);
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    cursor: pointer;
+    z-index: 20;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  button:hover {
+    background: #fff;
+    color: #111;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  .split .first {
+    top: 100%;
+    left: -100%;
+  }
+
+  .split .second {
+    top: -200%;
+    left: 100%;
+  }
+
+  .first-img:before,
+  .second-img:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+  }
+</style>
+</header>
+<body>
+  <div class="splitz-wrapper">
+    <div class="splitz overlay">
+      <section class="first">
+        <div class="splitz first-img">
+          <img src="http://www.d3bris.de/wp-content/uploads/2014/09/taylor-swift-hot-3.jpg">
+        </div>
+      </section>
+      <section class="second">
+        <div class="splitz second-img">
+          <img src="http://www.d3bris.de/wp-content/uploads/2014/09/taylor-swift-hot-3.jpg">
+        </div>
+      </section>
+    </div>
+    <button>Press me</button>
+  </div>
+</body>
+<script type="text/javascript">
+$(function() {
+
+  $(window).on('resize', function() {
+      var h = $('.overlay').height(),
+        w = $('.overlay').width();
+
+      var angle = Math.atan(h / w) * 57.29577;
+      var angle2 = angle + 270;
+      var width = Math.sqrt(h * h + w * w);
+
+      $('.first, .second').css({
+        "-webkit-transform": "rotate(" + angle + "deg)",
+        "-moz-transform": "rotate(" + angle + "deg)",
+        "transform": "rotate(" + angle + "deg)",
+        "width": width
+      });
+
+      $('.first-img, .second-img').css({
+        "-webkit-transform": "rotate(-" + angle + "deg)",
+        "-moz-transform": "rotate(-" + angle + "deg)",
+        "transform": "rotate(-" + angle + "deg)",
+        "width": w
+      });
+
+    })
+    .triggerHandler('resize');
+
+  // $('button').on('hover', function() {
+  //   $('splitz-wrapper').toggleClass('split');
+  //   return false;
+  // });
+  $('.splitz-wrapper').mouseenter(function() {$('.splitz-wrapper').addClass('split')});
+  $('.splitz-wrapper').mouseleave(function() {$('.splitz-wrapper').removeClass('split')});
+});
+</script>
+</HTML>
