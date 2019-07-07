@@ -34,7 +34,7 @@
                     <p>Digital Marketing is a constantly changing beast. Tactics used two years ago are vastly different from what's happening now. Search engines, especially Google, are in a consistent state of flux in the way in which they perform searches. It's our job to keep a finger on the pulse of how organic search is performed. We take great pride in our work, and we show it off by benchmarking and compiling your website's data from start to finish, improving your ROI with our digital marketing services.</p>
                 </div>
                 <div class="col-md-5 col-md-offset-1 dev-img">
-                    <img src="/img/sitting_on_a_wall_colored_socks.jpg" />
+                    <img style="filter: hue-rotate(145deg);" src="/img/desk.jpg" />
                 </div>
             </div>
             <div class="greeting about-services col-xs-12">

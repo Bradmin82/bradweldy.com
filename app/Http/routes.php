@@ -56,7 +56,6 @@ Route::get('/about/seo', 'PagesController@getAboutSEO');
 
 Route::get('/', 'PagesController@getIndex');
 Route::resource('posts', 'PostController');
-//Route::resource('blog', 'BlogController');
 
 
 /*Application Routes */

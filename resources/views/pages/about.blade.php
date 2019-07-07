@@ -60,9 +60,9 @@
 		    -moz-filter: blur(5px);
 		    -o-filter: blur(5px);
 		    -ms-filter: blur(5px);
-		    filter: blur(5px);
+		    filter: blur(17px);
 		    /*width: 100%;*/
-		    width: 70%;
+		    width: 60%;
 		    margin: 0 auto;
 		    height: 50px;
 		    background: white;
@@ -92,7 +92,7 @@
 
 	<div class="row">
 		<div class="col-md-12 about-title">
-			<h1>About BW Marketing</h1>
+			<h1>About Brad Weldy Marketing</h1>
             <hr />
 		</div>
 	</div>

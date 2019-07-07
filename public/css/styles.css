@@ -1,3 +1,7 @@
+#resume {
+	display: none;
+}
+
 .navbar-default .navbar-header .navbar-brand {
 	color: #0f228c;
 	font-weight: 400;
@@ -128,6 +132,11 @@ body.blog {
 .bw-cta {
 	clear: both;
 }
+
+.bw-cta .jumbotron {
+	margin-bottom: 0;
+}
+
 /*contact*/
 .my-contact-info a {
 	color: #0f228c;

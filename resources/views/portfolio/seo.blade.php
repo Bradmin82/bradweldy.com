@@ -36,7 +36,8 @@
                     {{-- <h1>Eloquent.</h1>
                     <h1>Clean.</h1>
                     <h1>Effective.</h1> --}}
-                    <img src="/img/seo.jpg" />
+<!--                     <img src="/img/seo.jpg" /> -->
+						<img src="/img/sitting_on_a_wall_colored_socks.jpg" />
                 </div>
             </div>
             <div class="greeting about-services col-xs-12">

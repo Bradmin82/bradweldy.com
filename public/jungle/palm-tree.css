@@ -1,0 +1,105 @@
+html {
+  background: yellow;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  height: 250px;
+  background: #fff;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 85%);
+}
+
+ul {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 125px auto 0;
+  background: #a60;
+  animation: sway-left 2s infinite linear;
+  box-shadow: 0 5px 0 0 #c80, 0 25px 0 0 #a60, 0 30px 0 0 #c80, 0 50px 0 0 #a60, 0 55px 0 0 #c80, 0 75px 0 0 #a60, 0 80px 0 0 #c80, 0 100px 0 0 #a60, 0 105px 0 0 #c80, 0 125px 0 0 #a60, 0 130px 0 0 #c80, 0 150px 0 0 #a60, 0 155px 0 0 #c80, 0 175px 0 0 #a60, 0 180px 0 0 #c80, 0 200px 0 0 #a60;
+}
+ul li {
+  position: absolute;
+  width: 50px;
+  height: 6px;
+}
+ul li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25px;
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: 25% 50% 50% 25%;
+  transform: rotate(-3deg);
+  animation: sway-left 2s infinite;
+  box-shadow: 0 9px 0 -3px #080, 0 18px 0 -2px #080, 0 27px 0 -1px #080, 0 36px 0 0 #080, 0 45px 0 0 #080, 0 54px 0 0 #080, 0 63px 0 0 #080, 0 72px 0 0 #080, 0 81px 0 0 #080, 0 90px 0 0 #080;
+}
+ul li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 25px;
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: 50% 25% 25% 50%;
+  transform: rotate(3deg);
+  animation: sway-right 2s infinite;
+  box-shadow: 0 9px 0 -3px #080, 0 18px 0 -2px #080, 0 27px 0 -1px #080, 0 36px 0 0 #080, 0 45px 0 0 #080, 0 54px 0 0 #080, 0 63px 0 0 #080, 0 72px 0 0 #080, 0 81px 0 0 #080, 0 90px 0 0 #080;
+}
+ul li:nth-child(1) {
+  top: -90px;
+  left: 70px;
+  transform: rotate(45deg);
+}
+ul li:nth-child(2) {
+  top: -60px;
+  left: -120px;
+  transform: rotate(-60deg);
+}
+ul li:nth-child(3) {
+  top: 70px;
+  left: 15px;
+  transform: rotate(170deg);
+}
+ul li:nth-child(4) {
+  top: -130px;
+  left: -30px;
+  transform: rotate(-5deg);
+}
+ul li:nth-child(5) {
+  top: -60px;
+  left: 60px;
+  transform: rotate(45deg);
+}
+
+@keyframes sway-left {
+  0% {
+    transform: skewY(0rad);
+  }
+  50% {
+    transform: skewY(-0.05rad);
+  }
+  100% {
+    transform: skewY(0rad);
+  }
+}
+@keyframes sway-right {
+  0% {
+    transform: skewY(0rad);
+  }
+  50% {
+    transform: skewY(0.05rad);
+  }
+  100% {
+    transform: skewY(0rad);
+  }
+}

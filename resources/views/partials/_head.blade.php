@@ -14,6 +14,15 @@
     <title>BW Marketing @yield('title')</title>
 
     <link rel="icon" href="/BWico.ico" type="image/x-icon"/>
+    <!-- Meta -->
+    <meta name="description" content="Brad Weldy Marketing | Web Development | SEO">
+	<link rel="canonical" href="https://bradweldy.com/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Brad Weldy Marketing | Web Development | SEO">
+	<meta property="og:description" content="Brad Weldy Marketing | Web Development | SEO">
+	<meta property="og:url" content="https://bradweldy.com/">
+	<meta property="og:site_name" content="Brad Weldy Marketing">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 

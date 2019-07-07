@@ -7,7 +7,7 @@
   <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <?php if($post->image) { ?>
-          <img src="{{ asset('images/' . $post->image) }}" height="400" width="800" />
+          <img src="{{ asset('images/' . $post->image) }}" height="400" width="800" style="height: auto; max-width: 100%;" />
         <?php } ?>
         <h1>{{ $post->title }}</h1>
         <p class="lead">{!! $post->body !!} </p>
@@ -16,7 +16,7 @@
 
 
 
-        <p class="lead">This is a Brad Weldy blog post</p>
+<!--         <p class="lead">This is a Brad Weldy blog post</p> -->
       </div>
 
   </div> <!-- End .row -->
@@ -43,7 +43,8 @@
 
   <div class="row">
 	  <div id="comment-form" class="col-md-8 col-md-offset-2">
-	  		{!! Form::open(['route' => ['comments.store', $post->id], 'method' => 'POST']) !!}
+<!--
+	  		{!! Form::open(['route' => ['comments.store', $post->id], 'method' => 'POST', 'id' => 'comment']) !!}
 
 	  			<div class="row">
 	  				<div class="col-md-6">
@@ -58,13 +59,26 @@
 	  					{!! Form::label('comment', "Comment:") !!}
 	  					{!! Form::textarea('comment', null, ['class' => 'form-control', 'rows' => '5']) !!}
 
-	  					{!! Form::submit('Add Comment', ['class' => 'btn btn-success btn-block form-spacing-top']) !!}
+						
 	  				</div>
 	  			</div>
 
 	  		{!! Form::close() !!}
+-->
 	  </div>
   </div>
+<!-- <input type="submit" value="Add Comment" class="btn btn-success btn-block form-spacing-top g-recaptcha" data-sitekey="6LeHlmEUAAAAALQ07_twuMfcW7AtdjdxPSGKTXwP" data-callback='onSubmit'> -->
 
+<!-- {!! Form::submit('Add Comment', ['class' => 'btn btn-success btn-block form-spacing-top g-recaptcha', 'data-sitekey' => '6LeHlmEUAAAAALQ07_twuMfcW7AtdjdxPSGKTXwP', 'data-callback' => 'onSubmit']) !!} -->
 
+@endsection
+
+@section('scripts')
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+	function onComment(token) {
+		console.log(token);
+		document.getElementById("comment-form").submit();
+	}
+</script>
 @endsection

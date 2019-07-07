@@ -56,6 +56,47 @@
             .quote {
                 font-size: 24px;
             }
+            
+            /* Texture test */
+            .texture-1 {
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			    background-image: url(/img/copy_texture_1_large.jpg);
+			    color: #90b6e3;
+			}
+			.texture-1-animate {
+				animation: slide-it 75s ease-out infinite;
+			}
+			.masked-copy h1 {
+				color: inherit;
+		        color: transparent !important;
+		        font-weight: 400;
+		    }
+
+			@supports (-webkit-background-clip: text) {
+			    .masked-copy {
+			        -webkit-background-clip:text;
+			        color: transparent !important;
+			    }
+			}
+			.word {
+			  position: relative;
+			  animation: slide-in-right 2s ease-out forwards;
+			  animation-delay: 0s;
+			  opacity: 0;
+			}
+			
+			@keyframes slide-it {
+			  0% {
+			    background-position: 0 50px;
+			  }
+			  60% {
+			    background-position: 0 -200px;
+			  }
+			  100% {
+			    background-position: 0 50px;
+			  }
+			}
 
 
         </style>

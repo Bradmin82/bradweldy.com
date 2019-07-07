@@ -9,10 +9,10 @@
             margin-bottom: 50px;
         }
         .contact-brad-weldy h2 {
-            font-weight: 200;
             color: #0f228c;
             color: #333;
             font-size: 33px;
+            font-weight: 200;
             text-align: center;
         }
         .contact-brad-weldy h2:last-child {
@@ -39,7 +39,7 @@
                     <h2><a href="tel:9494563310">(949)456-3310</a></h2>
                 </div>
                 <div class="col-md-6">
-                    <form action="{{ url('contact') }}" method="POST">
+                    <form id="contact" action="{{ url('contact') }}" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label name="email">Email:</label>
@@ -53,10 +53,18 @@
                             <label name="message">Message:</label>
                             <textarea id="message" name="message" class="form-control" placeholder="How can we help?"></textarea>
                         </div>
-                        <input type="submit" value="Send Message" class="btn btn-primary">
+                        <input type="submit" value="Send Message" class="btn btn-primary g-recaptcha" data-sitekey="6LeHlmEUAAAAALQ07_twuMfcW7AtdjdxPSGKTXwP" data-callback='onSubmit'>
                     </form>
                 </div>
             </div>
         </div>
 
+@endsection
+
+@section('scripts')
+<script>
+	function onSubmit(token) {
+		document.getElementById("contact").submit();
+	}
+</script>
 @endsection

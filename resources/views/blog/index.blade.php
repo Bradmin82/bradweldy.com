@@ -18,13 +18,13 @@
                   @foreach($posts as $post)
 
                       <div class="row post">
-                        <div class="col-xs-8">      
+                        <div class="col-xs-12 col-md-8">      
                             <h3>{!! $post->title !!}</h3>
 
                             <p>{!! substr($post->body, 0, 275) !!}{!! strlen($post->body) > 275 ? "..." : "" !!}</p>
                             <a href="{{ url('blog/' . $post->slug) }}" class="btn btn-primary">Read More</a>
                         </div>
-                        <div class="col-md-4 blog-index-img">
+                        <div class="col-xs-12 col-md-4 blog-index-img">
                           <?php if($post->image) { ?>
                             <img src="{{ asset('images/' . $post->image) }}" style="width: 100%;" />
                           <?php } ?>

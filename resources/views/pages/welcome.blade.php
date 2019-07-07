@@ -11,16 +11,18 @@
             /*color: #e7e7e7;
             color: #0f228c;*/
             margin: 50px 0px;
+            padding-top: 150px;
         }
         @media(max-width: 991px) {
-            .hp-flash h1:first-child {
-                display: none;
+            .hp-flash h1 {
+                padding-top: 0px;
             }
             .hp-flash .the-greet {
                 font-size: 66px;
                 text-align: center;
             }
         }
+
     </style>
 
     {{-- <script>
@@ -36,13 +38,12 @@
         <div class="row">
             <div class="col-md-12">
                 {{-- <div class="greeting grafiti"> --}}
-                <div class="col-md-4 greeting">
+                <div class="col-md-4 greeting texture-1 masked-copy">
                     <h1>Eloquent.</h1>
                     <h1>Clean.</h1>
                     <h1>Effective.</h1>
                 </div>
                 <div class="col-md-6 col-md-offset-2 hp-flash">
-                    <h1><br /></h1>
                     <h1 class="the-greet"></h1>
                 </div>
 
@@ -89,7 +90,16 @@
             };
             setInterval(action, timeout);
             action();
-
+            
+            if(navigator.userAgent.indexOf("Chrome") != -1 ){
+	            $('.masked-copy').addClass('texture-1-animate');
+	        }
+	        else if(navigator.userAgent.indexOf("Safari") != -1){
+	            $('.greeting').removeClass('masked-copy texture-1');
+	        }
+	        else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+	             return;
+	        }
         });
     </script>
 @endsection
