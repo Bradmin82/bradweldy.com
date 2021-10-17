@@ -58,6 +58,7 @@ Route::get('/', 'PagesController@getIndex');
 Route::resource('posts', 'PostController');
 
 
+
 /*Application Routes */
 
 Route::group(['middleware' => ['web']], function() {

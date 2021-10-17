@@ -24,6 +24,40 @@
 
 @section('content')
 
+	<?php
+/*
+	ReCaptcha attempt to fix
+		$ch = curl_init();
+	
+		curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+		    'secret'   => YOUR_RECAPTCHA_SECRET,
+		    'response' => USER_RESPONSE_TOKEN,
+		]));
+		
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		
+		$data = curl_exec($ch);
+		
+		curl_close($ch);
+		
+		$response = @json_decode($data);
+		
+		if ($response && $response->success)
+		{
+		    // validation succeeded, user input is correct
+		    echo('success');
+		}
+		else
+		{
+		    // response is invalid for some reason
+		    // you can find more in $data->{"error-codes"}
+		    echo($data->{"error-codes"});
+		}
+*/
+	?>
+
         <div class="row">
             <div class="col-md-12">
                 <h1>Contact</h1>

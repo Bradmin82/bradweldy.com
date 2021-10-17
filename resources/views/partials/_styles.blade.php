@@ -34,6 +34,10 @@
                 display: table-cell;
                 vertical-align: middle;
             }*/
+            
+            .greeting {
+	            cursor: default;
+            }
 
             .content.about, 
             .content.contact {

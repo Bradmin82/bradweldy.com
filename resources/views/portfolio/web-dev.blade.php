@@ -63,7 +63,7 @@
     <script>
         $(function() {
             
-            console.log('Bonus: jQuery is here!');
+            console.log('You are here, in the console with me!');
 
         });
     </script>

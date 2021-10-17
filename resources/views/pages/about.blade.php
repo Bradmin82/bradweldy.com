@@ -43,7 +43,7 @@
 			background-size: cover;
 
 			position: relative;
-    		overflow: hidden;
+    			overflow: hidden;
 			
 			height: 110px;
 		}
@@ -198,7 +198,6 @@
 
             var timeout = 4800;
             var portfolioFlash = ['<img src="/img/cheryl_lynch.jpg" />', '<img src="/img/californiapridewindowcleaners.png" />', '<img src="/img/fullerton_arboretum.jpg" />'];
-            //, 'I  &#10084; Michelle'
             var index = 0;
             var clientIndex = index + 1;
             var action = function() {

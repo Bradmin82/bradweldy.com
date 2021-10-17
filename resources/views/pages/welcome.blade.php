@@ -38,12 +38,12 @@
         <div class="row">
             <div class="col-md-12">
                 {{-- <div class="greeting grafiti"> --}}
-                <div class="col-md-4 greeting texture-1 masked-copy">
-                    <h1>Eloquent.</h1>
-                    <h1>Clean.</h1>
-                    <h1>Effective.</h1>
+                <div class="col-md-5 col-lg-4 greeting texture-1 masked-copy">
+                    <h1>Eloquent</h1>
+                    <h1>Clean</h1>
+                    <h1>Effective</h1>
                 </div>
-                <div class="col-md-6 col-md-offset-2 hp-flash">
+                <div class="col-md-6 col-md-offset-1 col-lg-offset-2 hp-flash">
                     <h1 class="the-greet"></h1>
                 </div>
 

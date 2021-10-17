@@ -2,6 +2,10 @@
 	display: none;
 }
 
+p {
+	letter-spacing: .1em;
+}
+
 .navbar-default .navbar-header .navbar-brand {
 	color: #0f228c;
 	font-weight: 400;
@@ -14,23 +18,23 @@
 	text-align: right;
 }
 .greeting h1 {
-	font-size: 88px;
-	font-weight: 200;
-	color: #e7e7e7;
+/* 	color: #e7e7e7; */
 	color: #0f228c;
+	font-size: 44px;
+	font-weight: 200;
 	margin: 50px 0px;
+	z-index: 3;
 }
-.greeting h1:nth-child(2) {
-	/*text-align: center;*/
-	/*margin-left: 7%;*/
+.greeting hr {
+	margin-bottom: 0;
 }
 .the-greet a {
-	text-decoration: none;
 	color: #333;
+	text-decoration: none;
 }
 .greeting.grafiti {
-	display: inline-block;
 	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.96) 3%,rgba(255,255,255,0.11) 75%,rgba(255,255,255,0) 84%,rgba(255,255,255,0) 95%,rgba(255,255,255,0) 97%);
+	display: inline-block;
 	padding: 10px 5%;
 	text-align: right;
 }
@@ -57,9 +61,6 @@ body.blog {
 	margin: 0px 50px;
     vertical-align: middle;
 }
-/*.BROKEN.homepage .jumbotron.home-title-jumbo {
-	background: radial-gradient(ellipse at center, rgba(51,51,51,1) 0%,rgba(51,51,51,1) 24%,rgba(51,51,51,0) 98%,rgba(51,51,51,0) 100%);
-}*/
 
 .about .jumbotron.home-title-jumbo.grafiti {
 	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 24%,rgba(255,255,255,0) 98%,rgba(255,255,255,0) 100%);
@@ -75,59 +76,42 @@ body.blog {
 }
 .top-right-corner-img {
 	position:absolute;
-	top:50px;
 	right:0px;
+	top:50px;
 	z-index: 10;
 }
 .top-right-corner-img img {
+	float:right;
 	max-width:50%;
 	z-index:0;
-	float:right;
 }
 .top-right-corner-img .gradient {
-	position:absolute;
-	top:0px;
-	right:0px;
-	z-index:2;
-	width:50%;
-	height:100%;
 	float:right;
+	height:100%;
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:50%;
+	z-index:2;
 }
 /*end homepage*/
 
 /*about*/
-.macbook-pro {
-	text-align: center;
-	/*padding: 75px 0px;*/
-}
-.client-site {
-	position: absolute;
-	/*top: 89px;*/
-	top: 14px;
-	width: 100%;
-}
-.client-site img {
-	width: 320px;
-    height: 205px;
-    margin: 0px 34px 0px 0px;
-}
-.service {
-	text-align: center;
-}
-.greeting.about-services {
-	text-align: left;
-	z-index: 11;
+.about-services {
+	background: #fff;
+    margin-top: 0px;
 }
 .about-services h1 {
-	font-size: 30px;
+	display: inline-block;
+	font-size: 20px;
 	font-weight: 300;
 	/*padding: 0 50px;*/
 	margin: 20px 0px;
-	display: inline-block;
 }	
 .about-services a {
-	text-decoration: none;
 	color: #0f228c;
+	font-size: 32px;
+	text-decoration: none;
 }
 .bw-cta {
 	clear: both;
@@ -136,18 +120,42 @@ body.blog {
 .bw-cta .jumbotron {
 	margin-bottom: 0;
 }
-
-/*contact*/
-.my-contact-info a {
-	color: #0f228c;
-	font-weight: 200;
+.client-site {
+	position: absolute;
+	/*top: 89px;*/
+	top: 12px;
+	width: 100%;
+}
+.client-site img {
+    height: 205px;
+    margin: 0px 34px 0px 0px;
+    width: 320px;
+}
+.greeting.about-services {
+	text-align: left;
+	z-index: 11;
+}
+.macbook-pro {
+	/*padding: 75px 0px;*/
+	text-align: center;
+}
+.macbook-pro img {
+	max-width: unset;
+}
+.service {
+	text-align: center;
 }
 
+/*contact*/
 .btn-h1-spacing {
   margin-top: 20px;
 }
 .form-spacing-top {
   margin-top: 20px;
+}
+.my-contact-info a {
+	color: #0f228c;
+	font-weight: 200;
 }
 .post-img img,
 .post-img iframe,  
@@ -160,18 +168,13 @@ body.blog {
 	background: rgba(238, 238, 238, 0.95);
 }
 .blog-posts-home {
-	/*background: #eee;*/
 	background: rgba(238, 238, 238, 0.95);
 	border-radius: 6px;
-	padding: 0px 20px;
-	/*margin: 0px 15px;*/
+	padding: 1px 20px 0px;
 }
 .blog-posts-home-side {
-	/*background: #eee;*/
 	background: rgba(238, 238, 238, 0.95);
 	border-radius: 6px;
-	/*padding: 0px 20px;*/
-	/*height: 800px;*/
 }
 .blog-posts-home-side hr {
 	border-top: 1px solid #000;
@@ -181,10 +184,10 @@ body.blog {
 }
 
 .author-image {
-	width: 50px;
-	height:50px;
 	border-radius: 50%;
 	float:left;
+	height:50px;	
+	width: 50px;
 }
 .author-name {
 	float: left;
@@ -195,18 +198,19 @@ body.blog {
 	margin: 5px 0px;	
 }
 .author-time {
+	color: #aaa;
 	font-size: 11px;
 	font-style: italic;
-	color: #aaa;
 }
+
 .comment {
 	margin-bottom: 45px;
 }
 .comment-content {
 	clear: both;
-	margin-left: 65px;
 	font-size: 16px;
 	line-height: 1.3em;
+	margin-left: 65px;
 }
 .comments-title {
 	margin-bottom: 45px;
@@ -223,50 +227,42 @@ body.blog {
 	margin-top: 20px;
 }
 
-@media(max-width: 1024px) {
-	.greeting h1 {
-		font-size: 66px;
-		z-index:3;
+@media(min-width: 776px) {
+	.about-services h1 {
+	    font-size: 30px;
 	}
-}
-@media(max-width: 991px) {
-	.macbook-pro img {
-		max-width: 350px;
+	.blog-posts-home {
+    		padding-top: 0;
 	}
 	.client-site {
-		/*top: 87px;*/
-		top: 12px;
+		top: 14px;
 	}
 	.client-site img {
 	    width: 243px;
 	    height: 153px;
 	    margin: 0px 33px 0px 0px;
 	}
-	.blog-posts-home {
-	    padding-top: 1px;
-	}
 	.greeting h1 {
-		font-size: 44px;
+		font-size: 66px;
 	}
-	.greeting hr {
-		margin-bottom: 0px;
-	}
-}
-@media(max-width: 776px) {
-	/*.about-title {
-		margin-top: 50px;
-	}*/
-	.about-services {
-	    margin-top: 0px;
-		background: #fff;
-	}
-	.about-services h1 {
-	    font-size: 20px;
-	}
-	.service:last-child {
-		/*padding: 0px;*/
+	.macbook-pro img {
+		max-width: 350px;
 	}
 }
+
+@media(min-width: 1024px) {
+	.greeting h1 {
+		font-size: 88px;
+		z-index:3;
+	}
+}
+
+@media(min-width: 1200px) {
+	.home-title-jumbo .btn {
+		margin-top: 20px;
+	}
+}
+
 @media(min-width: 1400px) {
 	.homepage .jumbotron.home-title-jumbo {
 		margin-top: 100px;

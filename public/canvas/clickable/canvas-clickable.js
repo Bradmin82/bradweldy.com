@@ -1,9 +1,5 @@
 function initCanvas() {
-	var my_canvas = document.getElementById('my_canvas');
-	var sw = window.innerWidth;
-	my_canvas.setAttribute('width', sw);
-	var ctx = my_canvas.getContext('2d');
-	
+	var ctx = document.getElementById('my_canvas').getContext('2d');
 	ctx.canvas.addEventListener('mousemove', function(event) {
 		var mouseX = event.clientX - ctx.canvas.offsetLeft;
 		var mouseY = event.clientY - ctx.canvas.offsetTop;
